@@ -4,20 +4,10 @@ import { refreshAccessToken } from "../controllers/user.controller";
 
 const tweetSchema = new Schema(
     {
-        name: {
+        content: {
             type: String,
             required: true
         },
-        description: {
-            type: String,
-            required: true
-        },
-        videos: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: "Video"
-            }
-        ],
         owner: {
             type: Schema.Types.ObjectId,
             ref: "User"
