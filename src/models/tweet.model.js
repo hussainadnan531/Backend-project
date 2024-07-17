@@ -1,4 +1,4 @@
-import mongoose, {mongo, Schema} from "mongoose";
+import mongoose, { mongo, Schema } from "mongoose";
 import { refreshAccessToken } from "../controllers/user.controller";
 
 
