@@ -89,8 +89,7 @@ const toggleTweetLike = asyncHandler(async (req, res) => {
                 new ApiResponse(201, like, "Tweet liked successfully")
             )
     }
-}
-)
+})
 
 const getLikedVideos = asyncHandler(async (req, res) => {
     //TODO: get all liked videos
