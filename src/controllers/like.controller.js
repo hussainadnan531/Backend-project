@@ -3,7 +3,7 @@ import { Like } from "../models/like.model.js"
 import { ApiError } from "../utils/ApiError.js"
 import { ApiResponse } from "../utils/ApiResponse.js"
 import { asyncHandler } from "../utils/asyncHandler.js"
-
+ 
 const toggleVideoLike = asyncHandler(async (req, res) => {
     const { videoId } = req.params
     //TODO: toggle like on video
@@ -60,8 +60,6 @@ const toggleCommentLike = asyncHandler(async (req, res) => {
                 new ApiResponse(201, like, "Comment liked successfully")
             )
     }
-
-
 })
 
 const toggleTweetLike = asyncHandler(async (req, res) => {
@@ -97,7 +95,6 @@ const toggleTweetLike = asyncHandler(async (req, res) => {
 const getLikedVideos = asyncHandler(async (req, res) => {
     //TODO: get all liked videos
     const { userId } = req.body
-
     const likedVideos = await Like.find(
         {
             user: userId, video: { $exists: true }
@@ -113,7 +110,6 @@ const getLikedVideos = asyncHandler(async (req, res) => {
                 likedVideos
             )
         )
-
 })
 
 export {
